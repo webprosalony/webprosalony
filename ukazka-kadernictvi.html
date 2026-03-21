@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ukázková jednostránková vizitka kadeřnictví — fiktivní salon Ateliér Vavřín. Inspirace pro váš web.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#2d4739">
+  <title>Ateliér Vavřín — kadeřnictví (ukázka webu)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ukazka-kadernictvi.css">
+</head>
+<body>
+  <p class="demo-banner">Ukázková stránka — fiktivní provoz. <a href="index.html">Zpět na WEB pro Salony</a></p>
+
+  <header class="av-header">
+    <div class="w av-header__inner">
+      <a class="av-logo" href="#">Ateliér <span>Vavřín</span></a>
+      <nav aria-label="Hlavní navigace">
+        <ul class="av-nav">
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#cenik">Ceník</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="av-tel" href="tel:+420777123456">+420&nbsp;777&nbsp;123&nbsp;456</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="av-hero" aria-labelledby="av-hero-title">
+      <div class="av-hero__bg" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=82"
+          srcset="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=640&q=82 640w,
+                  https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=960&q=82 960w,
+                  https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=82 1200w"
+          sizes="100vw"
+          width="1200"
+          height="800"
+          alt=""
+          fetchpriority="high"
+          decoding="async">
+        <div class="av-hero__overlay"></div>
+      </div>
+      <div class="w av-hero__content">
+        <p class="av-hero__eyebrow">Kadeřnictví · Praha 7</p>
+        <h1 id="av-hero-title">Vlasy, které vám budou slušet každý den</h1>
+        <p class="av-hero__lead">Střihy s lehkostí, barvy s citem a péče, na kterou se budete těšit. Rezervujte si čas v klidném ateliéru, kde máte náš plný zájem.</p>
+        <a class="av-btn av-btn--light" href="tel:+420777123456">Zavolejte a domluvte termín</a>
+      </div>
+    </section>
+
+    <section class="av-section av-section--alt" id="sluzby" aria-labelledby="sluzby-title">
+      <div class="w">
+        <header class="av-section__head">
+          <h2 id="sluzby-title">Co u nás najdete</h2>
+          <p>Pečlivá práce s důrazem na zdraví vlasů a styl, který sedí právě vám.</p>
+        </header>
+        <ul class="av-services">
+          <li class="av-service">
+            <svg class="av-service__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 26c0-6 4-10 8-14 4 4 8 8 8 14"/><path d="M12 10c2-3 6-3 8 0"/></svg>
+            <h3>Střih a tvar</h3>
+            <p>Dámské i pánské střihy, tvarování a finální styling podle vašeho životního stylu.</p>
+          </li>
+          <li class="av-service">
+            <svg class="av-service__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="14" r="6"/><path d="M6 28c1-6 5-8 10-8s9 2 10 8"/></svg>
+            <h3>Barvení a melíry</h3>
+            <p>Přirozené odstíny, jemné přelivy i výraznější proměny — vždy s testem náchylnosti.</p>
+          </li>
+          <li class="av-service">
+            <svg class="av-service__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 8h20v18a2 2 0 01-2 2H8a2 2 0 01-2-2V8z"/><path d="M10 12h12M10 16h8"/></svg>
+            <h3>Péče a rituály</h3>
+            <p>Hloubková regenerace, olejové zábaly a domácí péči vybereme tak, aby vám dlouho vydržela.</p>
+          </li>
+          <li class="av-service">
+            <svg class="av-service__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M16 4v24M10 10h12M9 22h14"/><circle cx="16" cy="26" r="2"/></svg>
+            <h3>Svatební a večerní</h3>
+            <p>Účesy na velký den i večer ven — zkoušku domluvíme v klidu s dostatečným předstihem.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="av-section" id="cenik" aria-labelledby="cenik-title">
+      <div class="w">
+        <header class="av-section__head">
+          <h2 id="cenik-title">Orientační ceník</h2>
+          <p>Přesnou cenu vždy stanovíme po konzultaci — podle délky a stavu vlasů.</p>
+        </header>
+        <div class="av-price">
+          <dl>
+            <div class="av-price__row">
+              <dt>Dámský střih</dt>
+              <dd>od 890&nbsp;Kč</dd>
+            </div>
+            <div class="av-price__row">
+              <dt>Pánský střih</dt>
+              <dd>od 490&nbsp;Kč</dd>
+            </div>
+            <div class="av-price__row">
+              <dt>Barvení / tónování</dt>
+              <dd>od 1&nbsp;290&nbsp;Kč</dd>
+            </div>
+            <div class="av-price__row">
+              <dt>Melír nebo balayage</dt>
+              <dd>od 2&nbsp;490&nbsp;Kč</dd>
+            </div>
+            <div class="av-price__row">
+              <dt>Péčivý rituál</dt>
+              <dd>od 590&nbsp;Kč</dd>
+            </div>
+          </dl>
+          <p class="av-price__note">Ukázkové ceny pro demonstraci webu — nejedná se o reálnou nabídku.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="av-section av-section--alt" id="galerie" aria-labelledby="galerie-title">
+      <div class="w">
+        <header class="av-section__head">
+          <h2 id="galerie-title">Atmosféra a práce</h2>
+          <p>Prostor, kde se můžete nadechnout — a výsledky, na které jsme hrdí.</p>
+        </header>
+        <div class="av-gallery">
+          <div class="av-gallery__item">
+            <img
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=82"
+              srcset="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=480&q=82 480w,
+                      https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=82 800w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="800"
+              height="1000"
+              alt="Kadeřnice pracuje na střihu klientky"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="av-gallery__item">
+            <img
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=82"
+              width="600"
+              height="400"
+              alt="Pánský střih v moderním salonu"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="av-gallery__item">
+            <img
+              src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=600&q=82"
+              width="600"
+              height="400"
+              alt="Interiér kadeřnictví s křesly a zrcadly"
+              loading="lazy"
+              decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="av-section" id="o-nas" aria-labelledby="onas-title">
+      <div class="w av-about">
+        <div class="av-about__img">
+          <img
+            src="https://images.unsplash.com/photo-1633681926022-84c24e498804?auto=format&fit=crop&w=800&q=82"
+            width="800"
+            height="1000"
+            alt="Detail vlasů po péči"
+            loading="lazy"
+            decoding="async">
+        </div>
+        <div class="av-about__text">
+          <h2 id="onas-title">Vítejte v Ateliéru Vavřín</h2>
+          <p>Jsme malý tým, který věří, že krása není spěch. Každou návštěvu stavíme na důvěře, poslechu a odbornosti — abyste odcházely s pocitem, že o vás bylo postaráno.</p>
+          <p>Používáme kvalitní přípravky a neustále se vzděláváme v trendech i technikách, které vašim vlasům prospívají.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="av-section av-section--alt" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="w">
+        <header class="av-section__head">
+          <h2 id="kontakt-title">Návštěva a otevírací doba</h2>
+          <p>Těšíme se na vás — termín si prosím rezervujte předem.</p>
+        </header>
+        <div class="av-contact">
+          <div class="av-card">
+            <h3>Kontakt</h3>
+            <address>
+              Ateliér Vavřín (ukázka)<br>
+              Dukelských hrdinů 12<br>
+              170&nbsp;00 Praha 7
+            </address>
+            <p class="av-card__meta">Telefon: <a href="tel:+420777123456">+420&nbsp;777&nbsp;123&nbsp;456</a><br>
+            E-mail: <a href="mailto:ahoj@atelier-vavrin-ukazka.cz">ahoj@atelier-vavrin-ukazka.cz</a></p>
+            <a class="av-btn" href="https://maps.google.com/?q=50.0990,14.4312" rel="noopener noreferrer" target="_blank">Otevřít mapu</a>
+          </div>
+          <div class="av-card">
+            <h3>Otevírací doba</h3>
+            <table class="av-hours">
+              <tr><th scope="row">Pondělí</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Úterý</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Středa</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Čtvrtek</th><td>10:00 – 20:00</td></tr>
+              <tr><th scope="row">Pátek</th><td>10:00 – 20:00</td></tr>
+              <tr><th scope="row">Sobota</th><td>9:00 – 14:00</td></tr>
+              <tr><th scope="row">Neděle</th><td>zavřeno</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="av-footer">
+    <div class="w">
+      <p class="av-footer__brand">Ateliér Vavřín</p>
+      <p>Fiktivní ukázka jednostránkového webu pro kadeřnictví.</p>
+      <p class="av-footer__cta"><a href="index.html">Chci podobný web pro svůj salon →</a></p>
+    </div>
+  </footer>
+</body>
+</html>

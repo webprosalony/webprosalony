@@ -1,0 +1,536 @@
+/* Ukázka: fiktivní kadeřnictví — Ateliér Vavřín */
+
+:root {
+  --cream: #faf6f1;
+  --cream-dark: #ebe3d9;
+  --ink: #1c1917;
+  --ink-soft: #57534e;
+  --olive: #2d4739;
+  --olive-light: #3d5c4a;
+  --gold: #9a8b7a;
+  --white: #ffffff;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 20px 50px rgba(28, 25, 23, 0.08);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --max: 70rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--olive);
+}
+
+.w {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* Top bar */
+.demo-banner {
+  background: var(--olive);
+  color: color-mix(in srgb, var(--white) 90%, transparent);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+.demo-banner a {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Header */
+.av-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--cream) 94%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+}
+
+.av-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+  flex-wrap: wrap;
+}
+
+.av-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.av-logo span {
+  color: var(--olive);
+  font-weight: 500;
+}
+
+.av-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.av-nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.av-nav a:hover,
+.av-nav a:focus-visible {
+  color: var(--olive);
+  outline: none;
+}
+
+.av-tel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--olive);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hero */
+.av-hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  align-items: end;
+  padding-block: clamp(3rem, 10vw, 5rem);
+  color: var(--white);
+}
+
+.av-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.av-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.av-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(28, 25, 23, 0.92) 0%,
+    rgba(28, 25, 23, 0.45) 45%,
+    rgba(28, 25, 23, 0.25) 100%
+  );
+}
+
+.av-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 38rem;
+}
+
+.av-hero__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin: 0 0 0.75rem;
+}
+
+.av-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.08;
+  margin: 0 0 1rem;
+}
+
+.av-hero__lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.92;
+  margin: 0 0 1.75rem;
+  max-width: 32ch;
+}
+
+.av-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.av-btn:active {
+  transform: scale(0.98);
+}
+
+.av-btn--light {
+  background: var(--white);
+  color: var(--olive);
+}
+
+.av-btn--light:hover,
+.av-btn--light:focus-visible {
+  background: var(--cream);
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
+/* Sections */
+.av-section {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+
+.av-section--alt {
+  background: var(--white);
+}
+
+.av-section__head {
+  text-align: center;
+  max-width: 36rem;
+  margin-inline: auto;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.av-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.75rem;
+}
+
+.av-section__head p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* Services */
+.av-services {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .av-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .av-services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.av-service {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.av-section--alt .av-service {
+  background: var(--cream);
+}
+
+.av-service__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--olive);
+  margin-bottom: 1rem;
+}
+
+.av-service h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.av-service p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+/* Pricing */
+.av-price {
+  max-width: 32rem;
+  margin-inline: auto;
+  background: linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border: 1px solid color-mix(in srgb, var(--olive) 12%, transparent);
+}
+
+.av-price dl {
+  margin: 0;
+  padding: 0;
+}
+
+.av-price__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+}
+
+.av-price__row:last-child {
+  border-bottom: none;
+}
+
+.av-price dt {
+  margin: 0;
+  font-weight: 500;
+}
+
+.av-price dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--olive);
+  white-space: nowrap;
+}
+
+.av-price__note {
+  margin: 1.25rem 0 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* Gallery */
+.av-gallery {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .av-gallery {
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.85rem;
+    min-height: 420px;
+  }
+
+  .av-gallery__item:first-child {
+    grid-row: span 2;
+  }
+}
+
+.av-gallery__item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.av-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 200px;
+}
+
+@media (min-width: 600px) {
+  .av-gallery__item:first-child img {
+    min-height: 100%;
+  }
+}
+
+/* About split */
+.av-about {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .av-about {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.av-about__img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.av-about__text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  margin: 0 0 1rem;
+}
+
+.av-about__text p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+}
+
+.av-about__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact */
+.av-contact {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 720px) {
+  .av-contact {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.av-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.av-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.av-hours {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.av-hours th,
+.av-hours td {
+  padding: 0.5rem 0;
+  text-align: left;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.av-hours th {
+  color: var(--ink-soft);
+  font-weight: 500;
+  width: 42%;
+}
+
+.av-card address {
+  font-style: normal;
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.av-card__meta {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.av-card .av-btn {
+  background: var(--olive);
+  color: var(--white);
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.av-card .av-btn:hover,
+.av-card .av-btn:focus-visible {
+  background: var(--olive-light);
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+}
+
+/* Footer */
+.av-footer {
+  background: var(--ink);
+  color: color-mix(in srgb, var(--white) 75%, transparent);
+  padding-block: 2.5rem;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.av-footer__brand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.av-footer a {
+  color: var(--white);
+}
+
+.av-footer__cta {
+  margin-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .av-btn {
+    transition: none;
+  }
+}
