@@ -4,15 +4,29 @@ Statický one-page web (HTML, CSS, vanilla JS) optimalizovaný pro nasazení na 
 
 Repozitář: [github.com/webprosalony/webprosalony](https://github.com/webprosalony/webprosalony)
 
-## Git — první push (Windows)
+## Git — účet webprosalony (ne jiný)
 
-Lokální složka je už Git repozitář s větví **`main`** a prvním commitem. Na GitHub musíte pushnout **účtem, který vlastní `webprosalony/webprosalony`**.
+Tento projekt patří klientovi / účtu **webprosalony**. V repozitáři **není** nic svázaného s jiným GitHub účtem — pokud se při `git push` objevilo jméno jiného uživatele, šlo jen o **uložené heslo/token ve Windows** pro obecnou adresu `github.com`.
 
-Pokud dostanete chybu *Permission denied* nebo *403* (např. přihlášen jiný účet než `webprosalony`):
+V téhle složce je nastaveno:
 
-1. Otevřete **Správce přihlašovacích údajů Windows** → **Přihlašovací údaje systému Windows** → `git:https://github.com` → **Odstranit** (nebo upravte údaje).
-2. Znovu ve složce projektu spusťte: `git push -u origin main`
-3. Při výzvě se přihlaste jako **webprosalony** (nebo použijte [Personal Access Token](https://github.com/settings/tokens) místo hesla).
+- `origin` = `https://webprosalony@github.com/webprosalony/webprosalony.git` (Git se má hlásit jako **webprosalony**)
+- lokální `user.name` = `webprosalony` (podpis commitů v tomto repu)
+
+### První push (Windows)
+
+1. **Smažte starý přístup k GitHubu**, aby se nepoužil omylem jiný účet:  
+   **Ovládací panely** → **Správce přihlašovacích údajů** → **Přihlašovací údaje systému Windows** → vyhledejte **`git:https://github.com`** → **Odstranit**.  
+   (Pokud tam máte víc záznamů pro GitHub, smažte ty, které nechcete pro tento projekt používat.)
+
+2. V PowerShellu:
+
+   ```powershell
+   cd "C:\Users\Jirka\Projekty\web_DO 4"
+   git push -u origin main
+   ```
+
+3. Při přihlášení použijte účet **webprosalony**. Heslo na GitHubu už často nefunguje — použijte **[Personal Access Token](https://github.com/settings/tokens)** (účet webprosalony → vygenerovat token s právem na repo) a vložte ho jako „heslo“.
 
 ## Hosting — aktualizace přes `git pull`
 
