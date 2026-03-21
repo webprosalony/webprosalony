@@ -2,6 +2,38 @@
 
 Statický one-page web (HTML, CSS, vanilla JS) optimalizovaný pro nasazení na [Netlify](https://www.netlify.com/).
 
+Repozitář: [github.com/webprosalony/webprosalony](https://github.com/webprosalony/webprosalony)
+
+## Git — první push (Windows)
+
+Lokální složka je už Git repozitář s větví **`main`** a prvním commitem. Na GitHub musíte pushnout **účtem, který vlastní `webprosalony/webprosalony`**.
+
+Pokud dostanete chybu *Permission denied* nebo *403* (např. přihlášen jiný účet než `webprosalony`):
+
+1. Otevřete **Správce přihlašovacích údajů Windows** → **Přihlašovací údaje systému Windows** → `git:https://github.com` → **Odstranit** (nebo upravte údaje).
+2. Znovu ve složce projektu spusťte: `git push -u origin main`
+3. Při výzvě se přihlaste jako **webprosalony** (nebo použijte [Personal Access Token](https://github.com/settings/tokens) místo hesla).
+
+## Hosting — aktualizace přes `git pull`
+
+Na serveru (nebo ve složce, kterou hosting čte jako veřejný kořen webu):
+
+```bash
+git clone https://github.com/webprosalony/webprosalony.git
+cd webprosalony
+```
+
+**Kořen webu** = tato složka (`index.html` leží přímo v kořeni repozitáře).
+
+Další aktualizace:
+
+```bash
+cd webprosalony
+git pull origin main
+```
+
+(Pokud hosting podporuje nasazení z Gitu přímo z GitHubu, stačí propojit repozitář a větev `main` — bez ručního `pull` na serveru.)
+
 ## Nasazení
 
 1. Nahrajte složku do Netlify (drag & drop nebo Git).
