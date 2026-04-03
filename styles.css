@@ -560,6 +560,71 @@ img {
 }
 
 /* Footer */
+/* Kontakt nad patičkou */
+.site-contact-bottom {
+  padding-block: var(--space-lg);
+  background: var(--bg-alt);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.site-contact-bottom__inner {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.site-contact-bottom h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--accent);
+  margin: 0 0 var(--space-md);
+}
+
+.site-contact-bottom__address {
+  font-style: normal;
+  margin: 0 0 var(--space-md);
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.site-contact-bottom__address p {
+  margin: 0 0 var(--space-xs);
+}
+
+.site-contact-bottom__address p:last-child {
+  margin-bottom: 0;
+}
+
+.site-contact-bottom__address a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-contact-bottom__address a:hover,
+.site-contact-bottom__address a:focus-visible {
+  text-decoration: underline;
+}
+
+.site-contact-bottom__more {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.site-contact-bottom__more a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-contact-bottom__more a:hover,
+.site-contact-bottom__more a:focus-visible {
+  text-decoration: underline;
+}
+
 .site-footer {
   background: var(--accent);
   color: color-mix(in srgb, var(--white) 88%, transparent);
@@ -573,6 +638,29 @@ img {
 .site-footer__copy {
   margin: var(--space-sm) 0 0;
   font-size: 0.85rem;
+}
+
+.site-footer__credit {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid color-mix(in srgb, var(--white) 18%, transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.site-footer__logo-img {
+  max-width: min(73px, 29vw);
+  height: auto;
+  display: block;
+}
+
+.site-footer__byline {
+  margin: 0;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--white) 78%, transparent);
+  line-height: 1.5;
 }
 
 /* Tablet+ */

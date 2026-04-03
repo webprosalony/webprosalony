@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Děkujeme — WEB pro Salony</title>
+  <link rel="icon" href="https://haklweb.b-cdn.net/ULOV_KLIENTA/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://haklweb.b-cdn.net/ULOV_KLIENTA/favicon.png">
+  <link rel="preconnect" href="https://haklweb.b-cdn.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cookie-consent.css">
   <style>
-    .thanks { min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+    .thanks { min-height: 55vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
     .thanks h1 { font-family: var(--font-serif); color: var(--accent); font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 1rem; }
     .thanks p { color: var(--text-muted); max-width: 32ch; margin: 0 auto 1.5rem; }
   </style>
@@ -20,8 +24,30 @@
     <div>
       <h1>Děkujeme za vaši poptávku</h1>
       <p>Ozveme se vám co nejdříve na uvedené telefonní číslo. Těšíme se na spolupráci.</p>
-      <a class="btn btn--primary" href="/">Zpět na úvod</a>
+      <a class="btn btn--primary" href="index.html">Zpět na úvod</a>
     </div>
   </main>
+
+  <section class="site-contact-bottom" aria-labelledby="site-contact-bottom-title">
+    <div class="wrap site-contact-bottom__inner">
+      <h2 id="site-contact-bottom-title">Kontakt</h2>
+      <address class="site-contact-bottom__address">
+        <p>Telefon: <a href="tel:+420719756746">+420&nbsp;719&nbsp;756&nbsp;746</a></p>
+        <p>E-mail: <a href="mailto:info@ulovklienty.cz">info@ulovklienty.cz</a></p>
+        <p>Jiří Hakl — Dobřichovice a Praha</p>
+      </address>
+      <p class="site-contact-bottom__more">Všechny podrobnější informace najdete na <a href="https://ulovklienty.cz/" target="_blank" rel="noopener noreferrer">ulovklienty.cz</a>.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__credit">
+        <img class="site-footer__logo-img" src="https://haklweb.b-cdn.net/ULOV_KLIENTA/New%20Project.webp" width="73" height="27" alt="Skupina Ulov Klienty" loading="lazy" decoding="async">
+        <p class="site-footer__byline">Vytvořeno Jiřím Haklem 2026 - Skupina Ulov Klienty.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="cookie-consent.js" defer></script>
 </body>
 </html>
