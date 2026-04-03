@@ -6,7 +6,7 @@
   var statusEl = document.getElementById("briefKlientFormStatus");
   var detailRow = document.getElementById("briefFormularDetailRow");
   var detailTa = document.getElementById("briefFormularDetail");
-  var REDIRECT_URL = "thank-you.html";
+  var REDIRECT_URL = "/thank-you";
 
   var DOPLNKY_LABELS = {
     qr_kod: "QR kód na web (zdarma)",
