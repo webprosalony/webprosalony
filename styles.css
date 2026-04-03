@@ -559,6 +559,12 @@ img {
   overflow: hidden;
 }
 
+.form__status {
+  min-height: 1.5em;
+  margin: 0 0 var(--space-sm);
+  font-size: 0.9rem;
+}
+
 /* Footer */
 /* Kontakt nad patičkou */
 .site-contact-bottom {

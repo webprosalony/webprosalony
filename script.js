@@ -1,6 +1,5 @@
 /**
- * Volitelné vylepšení: validace před odesláním zůstává na HTML5;
- * Netlify zpracuje POST. Žádné těžké knihovny.
+ * Plynulé scrollování ke kotvám. Poptávkový formulář odesílá poptavka-form.js (FormSubmit).
  */
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {

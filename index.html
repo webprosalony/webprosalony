@@ -129,11 +129,7 @@
           <h2 id="contact-title">Napište nám</h2>
           <p>Ozveme se vám co nejdříve a projdeme spolu vaše představy — bez tlaku a závazků.</p>
         </div>
-        <form class="form" name="poptavka" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
-          <input type="hidden" name="form-name" value="poptavka">
-          <p class="honeypot" aria-hidden="true">
-            <label>Nevyplňujte: <input name="bot-field"></label>
-          </p>
+        <form id="poptavkaForm" class="form" name="poptavka" method="post" action="#" novalidate>
           <div class="form__row">
             <label for="jmeno">Jméno</label>
             <input id="jmeno" name="jmeno" type="text" autocomplete="name" required placeholder="Vaše jméno">
@@ -153,6 +149,7 @@
               <option value="jine">Jiný beauty provoz</option>
             </select>
           </div>
+          <p id="poptavkaFormStatus" class="form__status" aria-live="polite"></p>
           <button class="btn btn--primary btn--block" type="submit">Odeslat poptávku</button>
         </form>
       </div>
@@ -192,6 +189,7 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script src="poptavka-form.js" defer></script>
   <script src="cookie-consent.js" defer></script>
 </body>
 </html>
