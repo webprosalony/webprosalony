@@ -1,21 +1,11 @@
 [build]
   publish = "."
 
-# Poděkování po formuláři: kanonická URL /thank-you (kvůli Netlify Pretty URLs a přesměrování z .html)
+# Starý odkaz po odeslání formuláře → nová cesta (obsah je thank-you/index.html)
 [[redirects]]
   from = "/thank-you.html"
-  to = "/thank-you"
+  to = "/thank-you/"
   status = 301
-
-[[redirects]]
-  from = "/thank-you"
-  to = "/thank-you.html"
-  status = 200
-
-[[redirects]]
-  from = "/thank-you/"
-  to = "/thank-you.html"
-  status = 200
 
 [[headers]]
   for = "/*"
