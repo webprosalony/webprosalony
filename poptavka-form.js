@@ -26,17 +26,27 @@
     return (s || "").toString().trim();
   }
 
+  function validateEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trim(v));
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     setStatus("");
 
     var jmeno = trim(form.querySelector('[name="jmeno"]').value);
+    var email = trim(form.querySelector('[name="email"]').value);
     var telefon = trim(form.querySelector('[name="telefon"]').value);
     var typVal = (form.querySelector('[name="typ_salonu"]') || {}).value || "";
 
     if (jmeno.length < 2) {
       setStatus("Vyplňte prosím jméno.");
       form.querySelector('[name="jmeno"]').focus();
+      return;
+    }
+    if (!validateEmail(email)) {
+      setStatus("Zadejte platný e-mail.");
+      form.querySelector('[name="email"]').focus();
       return;
     }
     if (telefon.length < 9) {
@@ -57,6 +67,7 @@
       _template: "table",
       _captcha: "false",
       jmeno: jmeno,
+      email: email,
       telefon: telefon,
       typ_salonu: TYP_SALONU[typVal] || typVal,
     };
