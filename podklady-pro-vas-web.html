@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interní stránka pro doplnění podkladů k tvorbě webu. Vyplňte texty, barvy, doménu a další informace.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#2D4739">
+  <link rel="canonical" href="https://webprosalony.cz/podklady-pro-vas-web.html">
+  <title>Podklady pro váš web — vyplnění pro klienta | WEB pro Salony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Přeskočit na obsah</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="index.html">WEB pro Salony</a>
+      <nav class="site-header__nav" aria-label="Menu">
+        <a href="index.html#kontakt">Kontakt</a>
+        <a href="ukazka-kadernictvi.html">Ukázka webu</a>
+        <a href="podklady-pro-vas-web.html" aria-current="page">Podklady pro web</a>
+      </nav>
+      <a class="btn btn--small btn--primary" href="index.html#kontakt">Chci nový web</a>
+    </div>
+  </header>
+
+  <main id="main" class="brief-klient">
+    <section class="hero brief-hero" aria-labelledby="brief-hero-title">
+      <div class="wrap">
+        <h1 id="brief-hero-title">Podklady pro personalizaci vašeho webu</h1>
+        <p class="lead">Seznam podkladů, které by mi velmi pomohly při personalizaci vašeho webu, tak aby vás nejlépe vystihoval.</p>
+        <p class="brief-hero__note">Mým cílem je Vás zbytečně nezdržovat a udělat Vám WEB jednak co nejméně náročně pro Vaší peněženku, tak i časově. Proto doufám že tento formulář zkrátí Váš čas s přípravou podkladů na úplné minimum.</p>
+        <ul class="brief-toc">
+          <li><a href="#cast-1-formular">1. Vyplnitelný seznam podkladů</a> — hlavní formulář níže na stránce</li>
+          <li><a href="#cast-2-ukazka">2. Ukázková jednoduchá odpověď</a> — jak může výplň vypadat</li>
+          <li><a href="#cast-3-popis">3. Popis jednotlivých bodů</a> — vysvětlení k jednotlivým položkám</li>
+          <li><a href="#cast-4-doplnky">4. Doplňkové služby a produkty</a> — přehled nabídky</li>
+        </ul>
+        <div class="hero__actions brief-hero__actions">
+          <a class="btn btn--ghost" href="ukazka-kadernictvi.html" target="_blank" rel="noopener">Podívat se na ukázkový web za 4&nbsp;000&nbsp;Kč</a>
+          <a class="btn btn--ghost" href="#cast-1-formular">Přejít k vyplnění</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section brief-section" id="cast-1-formular" aria-labelledby="cast1-title">
+      <div class="wrap brief-section__inner">
+        <h2 id="cast1-title">1. Váš seznam podkladů</h2>
+        <p class="section__intro brief-section__intro">Vyplňte prosím vše, co už máte připravené. U dlouhých textů neváhejte — čím víc detailů, tím lépe.</p>
+
+        <form id="briefKlientForm" class="brief-form form" novalidate>
+          <div class="form__row">
+            <label for="brief-prijmeni">Příjmení</label>
+            <input id="brief-prijmeni" name="prijmeni" type="text" required autocomplete="family-name" placeholder="Vaše příjmení">
+          </div>
+          <div class="form__row">
+            <label for="brief-email">E-mail</label>
+            <input id="brief-email" name="email" type="email" required inputmode="email" autocomplete="email" placeholder="vas@email.cz">
+          </div>
+          <div class="form__row">
+            <div class="brief-label-row">
+              <label for="brief-barvy">Barvy</label>
+              <a class="btn btn--primary btn--compact" href="https://colorhunt.co/" target="_blank" rel="noopener">Otevřít Color Hunt a vybrat paletu barvy</a>
+            </div>
+            <textarea id="brief-barvy" name="barvy" class="tall" rows="8" placeholder="Odkaz na paletu z Color Hunt (tlačítko LINK pod paletou), vlastní barvy, co se vám líbí / nelíbí…"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="brief-logo">Logo</label>
+            <textarea id="brief-logo" name="logo" class="tall" rows="8" placeholder="Máte logo? Popište nápad nebo přiložte později přes Úschovnu / e-mail…"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="brief-onas">O nás</label>
+            <textarea id="brief-onas" name="o_nas" class="xlarge" rows="12" placeholder="Kdo jste, čemu se věnujete, proč by si zákazník měl vybrat právě vás…"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="brief-produkty">Produkty a služby</label>
+            <textarea id="brief-produkty" name="produkty_sluzby" class="xlarge" rows="14" placeholder="Plný seznam služeb a produktů, ceny, případně odkaz na ceník v PDF…"></textarea>
+          </div>
+          <fieldset class="brief-fieldset form__row">
+            <legend>Formulář na webu</legend>
+            <ul class="brief-radiolist">
+              <li>
+                <label><input type="radio" name="formular_chci" value="ano"> Ano, chci na webu formulář</label>
+              </li>
+              <li>
+                <label><input type="radio" name="formular_chci" value="ne"> Ne, nechci na webu formulář</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div id="briefFormularDetailRow" class="form__row" hidden aria-hidden="true">
+            <label for="briefFormularDetail">Jaký formulář si představujete?</label>
+            <textarea id="briefFormularDetail" name="formular_jaky" class="xlarge" rows="10" placeholder="Např. jen kontakt „ozvěte se“, nebo podrobnější poptávka (místo výkonu, rozsah, typ služby…)"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="brief-social">Sociální sítě</label>
+            <textarea id="brief-social" name="socialni_site" class="tall" rows="8" placeholder="Odkazy na Facebook, Instagram, LinkedIn…"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="brief-katalogy">Online katalogy</label>
+            <textarea id="brief-katalogy" name="online_katalogy" class="tall" rows="8" placeholder="např. Sfirmy.cz, Poptávky.cz, e-Poptávky… odkazy nebo jen názvy"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="brief-domena">Doména</label>
+            <input id="brief-domena" name="domena" type="text" autocomplete="url" placeholder="www._____________.cz">
+          </div>
+          <fieldset class="brief-fieldset form__row">
+            <legend>Fotky</legend>
+            <p class="form-hint brief-fieldset__lead">Vyberte jednu možnost.</p>
+            <p class="brief-label-row brief-label-row--block">
+              <a class="btn btn--primary btn--compact" href="https://uschovna.cz/poslat-zasilku" target="_blank" rel="noopener">Odeslat fotografie přes Úschovnu</a>
+            </p>
+            <ul class="brief-radiolist">
+              <li>
+                <label><input type="radio" name="fotky_zpusob" value="grafika"> Nemám fotky, chci jen grafiku</label>
+              </li>
+              <li>
+                <label><input type="radio" name="fotky_zpusob" value="uschovna"> Posláno přes Úschovnu — <a href="https://uschovna.cz/poslat-zasilku" target="_blank" rel="noopener">poslat zásilku (uschovna.cz)</a></label>
+              </li>
+              <li>
+                <label><input type="radio" name="fotky_zpusob" value="email"> Posláno e-mailem</label>
+              </li>
+              <li>
+                <label><input type="radio" name="fotky_zpusob" value="whatsapp"> Posláno na WhatsApp — <a href="https://wa.me/420797756746" target="_blank" rel="noopener">797&nbsp;756&nbsp;746</a></label>
+              </li>
+              <li>
+                <label><input type="radio" name="fotky_zpusob" value="nevim"> Nevím, jak poslat</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="form__row">
+            <label for="brief-vlastni-prani">Vlastní popis a přání na webu</label>
+            <p class="form-hint">Co byste na webu chtěli a na co jsme se vás nezeptali — např. styl, rozložení stránky, odkaz na jinou (třeba konkurenční) stránku, ke které byste se chtěli designem přiblížit, nebo cokoli dalšího.</p>
+            <textarea id="brief-vlastni-prani" name="vlastni_prani" class="xlarge" rows="10" placeholder="Pište libovolně — čím konkrétněji, tím lépe…"></textarea>
+          </div>
+          <fieldset class="brief-fieldset form__row">
+            <legend>Doplňkové produkty a služby</legend>
+            <p class="form-hint brief-fieldset__lead">Označte, o co máte zájem. Lze vybrat více položek najednou. Pokud zatím nic nepotřebujete, stačí zaškrtnout první řádek.</p>
+            <ul class="brief-checklist">
+              <li>
+                <label><input type="checkbox" id="briefDoplnkyNone" name="doplnky_zadne" value="1"> Zatím nemám zájem</label>
+              </li>
+              <li>
+                <label><input type="checkbox" class="brief-doplnky-opt" name="doplnky" value="qr_kod"> Tvorba QR kódu na váš web — zdarma</label>
+              </li>
+              <li>
+                <label><input type="checkbox" class="brief-doplnky-opt" name="doplnky" value="nfc_karta"> NFC karta — 100–200&nbsp;Kč</label>
+              </li>
+              <li>
+                <label><input type="checkbox" class="brief-doplnky-opt" name="doplnky" value="nfc_stojanek"> NFC stojánek — 250&nbsp;Kč</label>
+              </li>
+              <li>
+                <label><input type="checkbox" class="brief-doplnky-opt" name="doplnky" value="vizitky"> Klasické vizitky (cena dle nákladu a grafiky)</label>
+              </li>
+              <li>
+                <label><input type="checkbox" class="brief-doplnky-opt" name="doplnky" value="reklamni_predmety"> Reklamní propisky, hrnky, trička… (cena dle domluvy)</label>
+              </li>
+              <li>
+                <label><input type="checkbox" class="brief-doplnky-opt" name="doplnky" value="jine_it"> Jiné programy, software, sklad, rezervační systém… (po domluvě)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <p id="briefKlientFormStatus" class="brief-form__status" aria-live="polite"></p>
+          <button class="btn btn--primary btn--block brief-form__submit" type="submit">Odeslat podklady</button>
+          <p class="brief-form__footnote">Po odeslání vás přesměrujeme na stránku s poděkováním. Data přijdou na <strong>info@ulovklienty.cz</strong>.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--why brief-section" id="cast-2-ukazka" aria-labelledby="cast2-title">
+      <div class="wrap brief-section__inner">
+        <h2 id="cast2-title">2. Ukázková jednoduchá odpověď</h2>
+        <p class="section__intro">Příklad toho, jak může vyplnění vypadat — čistě ilustračně.</p>
+        <div class="brief-sample card" aria-label="Ukázková odpověď">
+          <h3>Barvy</h3>
+          <p><a href="https://colorhunt.co/palette/7daacbe8dbb3fffdebce2626" target="_blank" rel="noopener">https://colorhunt.co/palette/7daacbe8dbb3fffdebce2626</a></p>
+          <h3>Logo</h3>
+          <p>Nemám, chci modrý čtverec, v něm červený bagr a pod tím nápis NOVÁK STAVEBNINY.</p>
+          <h3>O nás</h3>
+          <p>Jsme rodinná firma z Berouna specializující se na prodej stavebního materiálu. Zakládáme si na rychlé dostupnosti zboží a osobním přístupu. Zákazníkům pomáháme vybrat správné řešení pro jejich stavbu.</p>
+          <h3>Produkty a služby</h3>
+          <p>Stavební materiál (cement, písek, cihly), nářadí, doprava materiálu. Ceník pošlu v příloze.</p>
+          <h3>Formulář</h3>
+          <p>Ano – jednoduchý kontakt + možnost napsat poptávku.</p>
+          <h3>Sociální sítě</h3>
+          <p>Facebook: (doplníme)</p>
+          <h3>Online katalogy</h3>
+          <p>Sfirmy.cz, Poptávky.cz, e-Poptávky.eu</p>
+          <h3>Doména</h3>
+          <p>www.novakstavebninyberoun.cz, nebo jen www.novakstavebniny.cz</p>
+          <h3>Fotky</h3>
+          <p>Zašlu přes Úschovnu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section brief-section" id="cast-3-popis" aria-labelledby="cast3-title">
+      <div class="wrap brief-section__inner">
+        <h2 id="cast3-title">3. Popis jednotlivých bodů</h2>
+
+        <div class="brief-desc-block">
+          <h3>Barvy</h3>
+          <p>Vyberte si 2–4 barvy (poslední může být akcentní — výrazná např. jen na tlačítka). Doporučuji Color Hunt. Když najdete kombinaci, pod paletou je tlačítko LINK — ten odkaz mi zkopírujte do e-mailu nebo sem do pole Barvy.</p>
+          <p><a class="btn btn--primary" href="https://colorhunt.co/" target="_blank" rel="noopener">Otevřít Color Hunt a vybrat paletu barvy</a></p>
+          <p>Odkaz z tlačítka LINK pak vypadá například takto: <a href="https://colorhunt.co/palette/7daacbe8dbb3fffdebce2626" target="_blank" rel="noopener">https://colorhunt.co/palette/7daacbe8dbb3fffdebce2626</a></p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Logo</h3>
+          <p>Pokud logo máte, je to skvělé. Pokud máte jen nápad, zkuste ho popsat. Pokud žádné nechcete, není problém — být nemusí.</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>O nás</h3>
+          <p>2–4 věty o tom, kdo jste vy nebo vaše firma, čemu se nejvíc věnujete a hlavně proč by si zákazník měl vybrat právě vás.</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Produkty a služby</h3>
+          <p>Plnohodnotný seznam produktů a služeb, ideálně i ceny. Pokud máte ceník v PDF, je to ideální.</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Formulář</h3>
+          <p>Chcete mít na webu formulář? Pokud ano, jaký? Jen kontakt ve stylu „ozvěte se, zavolám zpět“, nebo podrobnější otázky (místo výkonu práce, podlahová plocha, počet oken, služba kterou poptáváte — cokoli)?</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Sociální sítě</h3>
+          <p>Pokud máte Instagram, Facebook nebo cokoli jiného, prosím odkazy, abychom mohli web propojit.</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Online katalogy</h3>
+          <p>Pokud jste na katalozích (Sfirmy, Poptávky.cz, e-Poptávky…), ideálně odkazy — stačí ale i seznam, zbytek dohledám.</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Doména</h3>
+          <p>Jak by se vaše stránka měla jmenovat: www._____________.cz — doplňte vlastní název. Neslibuji, že bude ještě volná, ale pokusím se najít co nejbližší variantu.</p>
+        </div>
+        <div class="brief-desc-block">
+          <h3>Fotky do galerie</h3>
+          <p>Fotky z posledních prací, profilovka, cokoli k vaší podnikatelské činnosti. Uložte prosím přes Úschovnu (lze poslat více souborů najednou i celou složku) a pošlete na e-mail hakl@ulovklienty.cz. Nahoře váš e-mail, komu hakl@ulovklienty.cz, do zprávy jen text ve tvaru web-vaše příjmení. Soubory nebo složky přetáhněte nahoru a odešlete.</p>
+          <p><a class="btn btn--primary" href="https://uschovna.cz/poslat-zasilku" target="_blank" rel="noopener">Odeslat fotografie přes Úschovnu</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--why brief-section" id="cast-4-doplnky" aria-labelledby="cast4-title">
+      <div class="wrap brief-section__inner">
+        <h2 id="cast4-title">4. Doplňkové služby, které vám můžu nabídnout</h2>
+        <ul class="brief-doplnky-list">
+          <li>Tvorba QR kódu na váš web — zdarma</li>
+          <li>NFC kartu — 100–200&nbsp;Kč — co to je a k čemu slouží: <a class="btn btn--chip" href="https://www.capturecard.co/" target="_blank" rel="noopener">capturecard.co</a></li>
+          <li>NFC stojánek — 250&nbsp;Kč — krátké video: <a class="btn btn--chip" href="https://www.youtube.com/shorts/0GGhkwKn6gE" target="_blank" rel="noopener">YouTube (shorts)</a></li>
+          <li>Klasické vizitky — záleží na počtu a přípravě grafiky, řádově cca 3&nbsp;Kč za kus při větším nákladu</li>
+          <li>Reklamní předměty — propisky, hrnky, trička… ceny závisí na mnoha faktorech</li>
+          <li>Jiné programy a IT — skladové hospodářství, rezervační systém a cokoli dalšího po vzájemné domluvě</li>
+        </ul>
+        <p class="brief-back">
+          <a class="btn btn--primary btn--block brief-form__submit" href="index.html">Domovská stránka</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span class="logo logo--footer">WEB pro Salony</span>
+      <p class="site-footer__copy">Součást nabídky Ulov Klienty — jedna jasná cena za web, férové podmínky.</p>
+      <p class="site-footer__back"><a class="site-footer__back-link" href="index.html">← Zpět na úvodní stránku</a></p>
+    </div>
+  </footer>
+
+  <script src="brief-klient-form.js" defer></script>
+</body>
+</html>
